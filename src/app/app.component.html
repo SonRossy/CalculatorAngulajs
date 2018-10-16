@@ -1,20 +1,45 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>A Simple Calculator</title>
+  <link rel="stylesheet" type="css" href="./src/app/app.component.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <table border="1" cellspacing="0" width="100%">
+    <tr>
+      <td colspan="4" id="calculatorInput"></td>
+    </tr>
+    <tr>
+      <td colspan="3"><button (click)="clearInput()">AC</button></td>
+      <td><button (click)="getButtonsValue('/')" >/</button></td>
+    </tr>
+    <tr>
+      <td ><button (click)="getButtonsValue(7)" >7</button></td>
+      <td><button (click)="getButtonsValue(8)">8</button></td>
+      <td><button (click)="getButtonsValue(9)" >9</button></td>
+      <td><button (click)="getButtonsValue('*')">*</button></td>
+    </tr>
+    <tr>
+      <td><button (click)="getButtonsValue(4)">4</button></td>
+      <td><button (click)="getButtonsValue(5)">5</button></td>
+      <td><button (click)="getButtonsValue(6)" >6</button></td>
+      <td><button (click)="getButtonsValue('-')">-</button></td>
+    </tr>
+    <tr>
+      <td><button (click)="getButtonsValue(1)" >1</button></td>
+      <td><button (click)="getButtonsValue(2)" >2</button></td>
+      <td><button (click)="getButtonsValue(3)">3</button></td>
+      <td><button (click)="getButtonsValue('+')">+</button></td>
+    </tr>
+    <tr>
+      <td colspan="2"><button (click)="getButtonsValue(0)">0</button></td>
+      <td><button (click)="getButtonsValue('.')">.</button></td>
+      <td><button (click)="evaluate()">=</button></td>
+    </tr>
+  </table>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+</body>
+</html>
